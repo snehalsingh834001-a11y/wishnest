@@ -1,1 +1,41 @@
+:root{
+  --bg:#f8f4ea;
+  --cream:#fffdf8;
+  --green:#7d9d7c;
+  --leaf:#a8c686;
+  --pink:#f6c9d6;
+  --brown:#5d4b3c;
+  --shadow:0 15px 35px rgba(0,0,0,.12);
+}
 
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:linear-gradient(#fdfcf9,#eef6ea);
+overflow-x:hidden;
+}
+
+h1,h2,h3{
+font-family:'Cormorant Garamond',serif;
+}
+
+button{
+cursor:pointer;
+border:none;
+border-radius:999px;
+padding:15px 35px;
+background:#7d9d7c;
+color:white;
+font-size:18px;
+transition:.3s;
+box-shadow:var(--shadow);
+}
+
+button:hover{
+transform:translateY(-3px) scale(1.04);
+}
