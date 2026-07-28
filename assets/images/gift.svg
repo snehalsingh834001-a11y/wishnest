@@ -1,1 +1,15 @@
 
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <rect x="40" y="70" width="120" height="90" rx="8" fill="#F5B335"></rect>
+  <rect x="94" y="40" width="12" height="120" fill="#E74C3C"></rect>
+  <rect x="40" y="98" width="120" height="10" fill="#E74C3C"></rect>
+  <rect x="35" y="55" width="130" height="25" rx="5" fill="#FFD24D"></rect>
+
+  <path d="M95 55
+           C75 25 45 35 60 60
+           C70 75 90 70 95 55Z" fill="#E74C3C"></path>
+
+  <path d="M105 55
+           C125 25 155 35 140 60
+           C130 75 110 70 105 55Z" fill="#E74C3C"></path>
+</svg>
