@@ -8,7 +8,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-
 *{
 margin:0;
 padding:0;
@@ -22,14 +21,13 @@ min-height:100vh;
 display:flex;
 justify-content:center;
 align-items:center;
-padding:40px;
-overflow:hidden;
+padding:30px;
 }
 
 .container{
+max-width:850px;
+width:100%;
 background:white;
-width:90%;
-max-width:800px;
 padding:40px;
 border-radius:25px;
 text-align:center;
@@ -40,35 +38,23 @@ animation:fade 1s ease;
 h1{
 font-size:55px;
 color:#ff4f8b;
-margin-bottom:20px;
+margin-bottom:15px;
 }
 
 h2{
-color:#444;
-margin-bottom:25px;
-}
-
-p{
-font-size:18px;
-line-height:1.8;
 color:#666;
 margin-bottom:30px;
 }
 
-.gallery{
-display:flex;
-justify-content:center;
-flex-wrap:wrap;
-gap:15px;
-margin-top:20px;
-}
-
-.gallery img{
-width:150px;
-height:150px;
-border-radius:20px;
-object-fit:cover;
-box-shadow:0 10px 25px rgba(0,0,0,.15);
+.letter{
+background:#fff6fa;
+padding:25px;
+border-radius:18px;
+font-size:18px;
+line-height:1.8;
+color:#444;
+white-space:pre-wrap;
+margin-top:30px;
 }
 
 @keyframes fade{
@@ -81,7 +67,6 @@ opacity:1;
 transform:translateY(0);
 }
 }
-
 </style>
 
 </head>
@@ -90,27 +75,26 @@ transform:translateY(0);
 
 <div class="container">
 
-<h1>🎉 Happy Birthday! 🎂</h1>
+<h1>🎉 Happy Birthday <span id="personName"></span> 🎂</h1>
 
-<h2>This page will soon become someone's special surprise ❤️</h2>
+<h2>Someone made this just for you ❤️</h2>
 
-<p>
-Every memory deserves a beautiful place.
-This is the first version of WishNest.
-Soon, your photos, letter, music and memories will appear here automatically.
-</p>
-
-<div class="gallery">
-
-<img src="https://picsum.photos/200?1">
-
-<img src="https://picsum.photos/200?2">
-
-<img src="https://picsum.photos/200?3">
+<div class="letter" id="letterBox"></div>
 
 </div>
 
-</div>
+<script>
+
+const name = localStorage.getItem("name");
+const letter = localStorage.getItem("letter");
+
+document.getElementById("personName").innerText =
+name || "Special Person";
+
+document.getElementById("letterBox").innerText =
+letter || "No letter found.";
+
+</script>
 
 </body>
 </html>
